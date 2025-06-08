@@ -1,0 +1,419 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="src/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <title>Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <script src="src/scroll-animations.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <img src="src/images/logotop.png" alt="Logo" />
+              </div>              
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#art" class="nav-link">Art</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/adamyanai/" class="social" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/adamyanai" class="social" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://github.com/adamyanai" class="social" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="src/pdfs/resume.pdf" class="social" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12z"/></svg>
+                </a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-title-container">
+                        <h1 class="name">Adam Yanai</h1>
+                        <div class="title-container">
+                            <p>Computer Engineering Student</p>
+                            <p>@</p>
+                            <p>Boston University</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- <img class="logo" src="src/images/logo2.png" alt="Adam Yanai's Logo"/> -->
+                    <video class="logo" autoplay loop muted playsinline webkit-playsinline style="border: none; outline: none; box-shadow: none;">
+                        <source src="src/images/logo.mov" type="video/quicktime">
+                        <source src="src/images/logo.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content reveal">
+                <div class="about-text reveal-left">
+                    <h2>Hello, I'm Adam.</h2>
+                    <p>I'm a student at Boston University studying computer engineering. Coming from an artistic background, my passion for engineering stems from the excitement of the creative process. I love to explore new projects through unique approaches and interdisciplinary collaborations. I am experienced in the use of various CAD software, programming languages, artistic mediums, and architectural design techniques.</p>
+                </div>
+                <div class="about-image reveal-right">
+                    <img class="headshot" src="src/images/bereal.JPG" alt="Adam Yanai's BeReal"/>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work">
+            <h2>Here's some of my work...</h2>
+            <p class="section-description">A set of selected projects - both completed and ongoing - across a range of disciplines. I'm constantly seeking opportunities to expand my skill set with new experiences.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-emoji">👾</span>
+                        <h3>Programming & Data</h3>
+                        <p class="subtext">My programming experience includes projects in system design using Java and Python, as well as data-oriented research through MATLAB.</p>
+                        <a href="code.html" class="project-link">View Projects</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-emoji">👨‍💻</span>
+                        <h3>Design & Exploration</h3>
+                        <p class="subtext">Product design - an inherent aspect of the innovation process - pushes me to structure my ideas and enable collaborations across disciplines.</p>
+                        <a href="explore.html" class="project-link">View Projects</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-emoji">⚙️</span>
+                        <h3>Machining & Robotics</h3>
+                        <p class="subtext">As a lab leader at the BU Engineering Product Innovation Center and a robotics enthusiast, I have designed and created an array of varying parts.</p>
+                        <a href="machine.html" class="project-link">View Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="art" class="art">
+            <h2>And here's some of my art...</h2>
+            <p class="section-description">Included are works in fine arts and photography, most of which created during my time as a fine arts student at LaGuardia High School.</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="src/images/mountainart.png" alt="Mountain">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/archart.png" alt="Arch">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/piecesart.png" alt="Collage">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/penart.png" alt="Pen & Ink">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/horseart.png" alt="Horse">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/showcaseart.png" alt="Showcase">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/paintingart.png" alt="Painting">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/boxesart.png" alt="Boxes">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/boxes2art.png" alt="Boxes2">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/handsart.png" alt="Hands">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/projectart.png" alt="Project">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/magazineart.png" alt="Magazine">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/selfart.png" alt="Self">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/chairplanart.png" alt="Chair Plan">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/chairart.png" alt="Chair">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/carart.png" alt="Car">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/buildart.png" alt="Building">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/celticsart.png" alt="Celtics">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/mountainsart.png" alt="Mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/bikeart.png" alt="Bike">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/bottlesart.png" alt="Bottles">
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="src/images/elephant.png" alt="Elephant">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/protest.png" alt="Protest">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/concert.png" alt="Concert">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/paris.png" alt="Paris">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/paris2.png" alt="Paris2">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/planes.png" alt="Planes">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/car.png" alt="Car">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/tents.png" alt="Tets">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/windows.png" alt="Windows">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/build.png" alt="Building">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/bike.png" alt="Bike">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/intersect.png" alt="Intersect">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/sketch.png" alt="Sketch">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/hotel.png" alt="Hotel">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/nyc.png" alt="NYC">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/africa.png" alt="Africa">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/arch.png" alt="Architecture">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/vaca.png" alt="Celtics">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/airport.png" alt="Mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/sf.png" alt="Bike">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/boats.png" alt="Bottles">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/glide.png" alt="Glide">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/glide2.png" alt="Glide2">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/glide3.png" alt="Glide3">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/glide.png" alt="Glide4">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/sunset.png" alt="Sunset">
+                </div>
+                <div class="gallery-item">
+                    <img src="src/images/celtics.png" alt="Celtics">
+                </div>
+            </div>
+        </section>
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 700px;
+                width: 100%;
+            }
+            
+            input,
+            textarea {
+                width: 100%;
+                background: transparent;
+                padding: 20px;
+                outline: none;
+            }
+            
+            input:focus,
+            textarea:focus {
+                outline: none;
+                border-color: #B7B6ED;
+            }
+
+            button {
+                margin-left: auto;
+                padding: 14px 28px;
+                background-color: transparent;
+            }
+
+            button:hover {
+                background-color: #f7f7f7;
+                color: #000;
+                border-color: #B7B6ED;
+            }
+
+            input, 
+            textarea, 
+            button {
+                border-radius: 20px;
+                border: 3px solid #000;
+                font-size: 20px;
+                color: black;
+            }
+        </style>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <center><h2>Where you're most likely to bump into me...</h2></center>
+        <div class="maps-container">
+            <div class="map-wrapper">
+                <iframe class="city" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377651.24203813274!2d-71.59408933663816!3d42.31265946341851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3652d0d3d311b%3A0x787cbf240162e8a0!2sBoston%2C%20MA!5e0!3m2!1sen!2sus!4v1707201039410!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-wrapper">
+                <iframe class="city" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.06216367584!2d-74.30932114178677!3d40.69701930501454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1707201100527!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-wrapper">
+                <iframe class="city" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108169.9218576244!2d34.7148449875601!3d32.08790483200671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4ca6193b7c1f%3A0xc1fb72a2c0963f90!2sTel%20Aviv-Yafo%2C%20Israel!5e0!3m2!1sen!2sus!4v1707201008326!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-wrapper">
+                <iframe class="city" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424146.1024415476!2d150.6517916!3d-33.8688197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2sus!4v1707201200000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <center><form method="POST" action="https://formsubmit.co/adam.yanai@gmail.com">
+            <h2>Let's talk!</h2>
+            <input name="name" type="text" placeholder="Name" required/>
+            <input name="email" type="email" placeholder="Email" required/>
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form></center>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <center><p7>Thanks for the visit :) Let's do that again!</p7></center>
+        <br/>
+        <div class="intro">
+            <div class="intro-text">
+              <h1 class="hide">
+                <span class="text">Engineer.</span>
+              </h1>
+              <h1 class="hide">
+                <span class="text">Designer.</span>
+              </h1>
+              <h1 class="hide">
+                <span class="text">Creator.</span>
+              </h1>
+            </div>
+          </div>
+        <div class="slider"></div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./anim.js"></script>
+        <script>
+            // New cursor-following gradient effect
+            document.addEventListener('DOMContentLoaded', function() {
+                const heroTitleContainer = document.querySelector('.hero-title-container');
+                
+                // Create a new approach for the gradient effect
+                function applyGradientEffect(element, e) {
+                    // Get the position of the cursor relative to the container
+                    const rect = element.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    // Create a radial gradient that follows the cursor
+                    const gradient = `radial-gradient(circle 200px at ${x}px ${y}px, var(--primary-color) 0%, var(--text-color) 60%)`;
+                    
+                    // Apply the gradient ONLY to the name element
+                    const nameElement = element.querySelector('.name');
+                    if (nameElement) {
+                        // Apply the gradient as a background
+                        nameElement.style.background = gradient;
+                        nameElement.style.backgroundClip = 'text';
+                        nameElement.style.webkitBackgroundClip = 'text';
+                        nameElement.style.webkitTextFillColor = 'transparent';
+                        nameElement.style.color = 'transparent'; // Ensure text is transparent
+                    }
+                }
+                
+                // Reset the gradient when the cursor leaves
+                function resetGradient(element) {
+                    // Reset ONLY the name element
+                    const nameElement = element.querySelector('.name');
+                    if (nameElement) {
+                        // Reset to the default text color
+                        nameElement.style.background = 'none';
+                        nameElement.style.webkitTextFillColor = 'var(--text-color)';
+                        nameElement.style.color = 'var(--text-color)'; // Reset color as well
+                    }
+                }
+                
+                // Add event listeners for the gradient effect
+                heroTitleContainer.addEventListener('mousemove', function(e) {
+                    applyGradientEffect(heroTitleContainer, e);
+                });
+
+                heroTitleContainer.addEventListener('mouseleave', function() {
+                    resetGradient(heroTitleContainer);
+                });
+            });
+        </script>
+    </body> 
+</html>
